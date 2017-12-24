@@ -41,6 +41,9 @@ public class MyMvcConfig extends WebMvcConfigurerAdapter{
         return viewResolver;
     }
 
+
+
+
     /*********************************静态资源配置**************************************************/
     /**
      * 资源配置
