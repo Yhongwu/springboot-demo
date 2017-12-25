@@ -1,0 +1,2 @@
+spring data rest
+可将repository自动输出为rest资源

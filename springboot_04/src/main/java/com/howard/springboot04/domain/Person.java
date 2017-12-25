@@ -1,14 +1,17 @@
-package com.howard.springboot03.domain;
+package com.howard.springboot04.domain;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
+import java.io.Serializable;
 
 @Entity //注明这是和数据库映射的实体
 @NamedQuery(name = "Person.withNameAndAddressNamedQuery",
 query = "select p from Person p where p.name=?1 and p.address=?2")
-public class Person {
+public class Person implements Serializable{
     @Id //主键
     @GeneratedValue //自增
     private Long id;
@@ -17,6 +20,8 @@ public class Person {
 
     private String address;
 
+    //返回的json中忽略该数据
+    @JsonIgnore
     private Integer age;
 
     public Person() {

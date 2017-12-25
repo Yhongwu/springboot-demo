@@ -1,0 +1,12 @@
+springboot springdata jpa
+
+http://localhost:8080/query1?address=广州
+http://localhost:8080/query2?address=广州&name=hh
+http://localhost:8080/query3?address=广州&name=hh
+http://localhost:8080/query4?address=广州&name=hh
+http://localhost:8080/sort
+http://localhost:8080/page
+
+springboot 事务
+
+springboot 缓存
