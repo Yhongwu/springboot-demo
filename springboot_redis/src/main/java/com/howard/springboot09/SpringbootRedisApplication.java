@@ -50,8 +50,8 @@ public class SpringbootRedisApplication {
 		om.enableDefaultTyping(ObjectMapper.DefaultTyping.NON_FINAL);
 		jackson2JsonRedisSerializer.setObjectMapper(om);
 
-		template.setValueSerializer(jackson2JsonRedisSerializer); //1
-		template.setKeySerializer(new StringRedisSerializer()); //2
+		template.setValueSerializer(jackson2JsonRedisSerializer);
+		template.setKeySerializer(new StringRedisSerializer());
 
 		template.afterPropertiesSet();
 		return template;

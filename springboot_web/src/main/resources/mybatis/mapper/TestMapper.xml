@@ -1,17 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.howard.springboot.dao.mybatis.TestMapper">
 
-<mapper namespace="com.howard.springboot.dao.TestMapper">
-    <resultMap type="com.howard.springboot.domain.Test" id="test">
+<!--    <cache type="com.howard.springboot.config.MybatisRedisCacheConfig">
+        <property name="eviction" value="LRU" />
+        <property name="flushInterval" value="6000000" />
+        <property name="size" value="1024" />
+        <property name="readOnly" value="false" />
+    </cache>-->
+
+    <resultMap type="com.howard.springboot.domain.Test" id="BaseResultMap">
         <result column="id" property="id" jdbcType="INTEGER" />
         <result column="name" property="name" jdbcType="VARCHAR" />
         <result column="age" property="age" javaType="INTEGER"/>
 
     </resultMap>
-    <select id="findByName" parameterType="java.lang.String" resultMap="test">
+
+    <sql id="Base_Column_List">
+
+        id,name,age
+    </sql>
+
+    <select id="findByName" parameterType="java.lang.String" resultMap="BaseResultMap">
         select * from test where name = #{name}
     </select>
+
+    <select id="findById" parameterType="int" resultMap="BaseResultMap">
+        select * from test where id = #{id}
+    </select>
+
     <insert id="insert">
         insert into test (id,name,age) values (#{id},#{name},#{age})
     </insert>
+
+    <select id="findByPage" resultMap="BaseResultMap">
+        SELECT *
+        FROM  test
+    </select>
+
+    <select id="findAll" resultMap="BaseResultMap" >
+        SELECT <include refid="Base_Column_List"/>
+        FROM  test
+    </select>
 </mapper>
