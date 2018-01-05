@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.howard</groupId>
-	<artifactId>springboot_10</artifactId>
+	<artifactId>springboot_mybatis</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>springboot_10</name>
+	<name>springboot_mybatis</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>

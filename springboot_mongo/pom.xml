@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.howard</groupId>
-	<artifactId>springboot_08</artifactId>
+	<artifactId>springboot_mongo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>springboot_08</name>
+	<name>springboot_mongo</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>

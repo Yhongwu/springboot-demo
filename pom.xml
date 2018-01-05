@@ -10,6 +10,16 @@
     <modules>
         <module>spring4</module>
         <module>springmvc4</module>
+        <module>springboot_cache</module>
+        <module>springboot_mongo</module>
+        <module>springboot_mybatis</module>
+        <module>springboot_rabbit</module>
+        <module>springboot_redis</module>
+        <module>springboot_rest</module>
+        <module>springboot_security</module>
+        <module>springboot_thymeleaf</module>
+        <module>springboot_activemq</module>
+        <module>springboot_hello</module>
     </modules>
     <packaging>pom</packaging>
 

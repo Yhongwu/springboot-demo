@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.howard</groupId>
-	<artifactId>springboot_05</artifactId>
+	<artifactId>springboot_security</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>springboot_05</name>
+	<name>springboot_security</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
