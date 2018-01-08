@@ -6,9 +6,10 @@ import freemarker.template.TemplateException;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
+/**
+ * freemarker扩展
+ */
 public class FreeMarkerConfigExtend extends FreeMarkerConfigurer {
     @Override
     public void afterPropertiesSet() throws IOException, TemplateException {

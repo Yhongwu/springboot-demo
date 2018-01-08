@@ -9,14 +9,20 @@ import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
-//测试暂通过
-//@Configuration
+
+/**
+ * 配置freemarker 使用自定义的FreeMarkerConfigExtend
+ * freemarker整合shiro标签 参考：http://www.sojson.com/blog/143.html
+ * 这里我将其以springboot配置的方式实现
+ */
+@Configuration
 public class FreeMarkerConfig {
     @Bean
     public FreeMarkerConfigurer freeMarkerConfigurer () {
         FreeMarkerConfigExtend configExtend = new FreeMarkerConfigExtend();
-        configExtend.setTemplateLoaderPath("/WEB-INF/ftl/");
 
+        //与application.properties冲突 不能同时配置
+        configExtend.setTemplateLoaderPath("classpath:/templates");//WEB-INF/ftl/
         Map<String, Object> map = new HashMap<>();
         XmlEscape fmXmlEscape = new XmlEscape();
         map.put("xml_escape",fmXmlEscape);
@@ -36,7 +42,7 @@ public class FreeMarkerConfig {
         pro.setProperty("time_format","HH:mm:ss");
         pro.setProperty("number_format","#");
         pro.setProperty("whitespace_stripping","true");
-        pro.setProperty("auto_import","/common/config/top.ftl as _top,/common/config/left.ftl as _left,/common/config/html.ftl as _html,/common/config/bottom.ftl as _footer,/common/config/menu.ftl as _menu");
+        //pro.setProperty("auto_import","/common/config/top.ftl as _top,/common/config/left.ftl as _left,/common/config/html.ftl as _html,/common/config/bottom.ftl as _footer,/common/config/menu.ftl as _menu");
         configExtend.setFreemarkerSettings(pro);
 
         return configExtend;

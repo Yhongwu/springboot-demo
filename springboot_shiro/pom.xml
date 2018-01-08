@@ -80,7 +80,7 @@
 			<artifactId>spring-context-support</artifactId>
 		</dependency>
 
-		<!-- freemarker + shiro（标签） -->
+		<!-- freemarker + shiro（标签） 非shiro官方：https://github.com/jagregory/shiro-freemarker-tags-->
 		<dependency>
 			<groupId>net.mingsoft</groupId>
 			<artifactId>shiro-freemarker-tags</artifactId>
