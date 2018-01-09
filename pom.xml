@@ -19,6 +19,10 @@
         <module>springboot_security</module>
         <module>springboot_thymeleaf</module>
         <module>springboot_activemq</module>
+        <module>springboot_freemarker</module>
+        <module>springboot_shiro</module>
+        <module>springboot_web</module>
+        <module>springboot_jsp</module>
         <module>springboot_hello</module>
     </modules>
     <packaging>pom</packaging>
