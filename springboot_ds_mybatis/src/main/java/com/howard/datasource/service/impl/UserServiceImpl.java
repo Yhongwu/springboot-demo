@@ -1,7 +1,6 @@
 package com.howard.datasource.service.impl;
 
-import com.howard.datasource.common.DatabaseContextHolder;
-import com.howard.datasource.common.DatabaseType;
+
 import com.howard.datasource.common.annotation.DataSource;
 import com.howard.datasource.entity.User;
 import com.howard.datasource.mapper.UserMapper;
@@ -30,7 +29,5 @@ public class UserServiceImpl implements UserService {
     public User findByName(String username) {
         return userMapper.findByName(username);
     }
-
-
 
 }
